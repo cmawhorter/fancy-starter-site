@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%= locale %>">
+<html lang="<%= request.locale %>">
 <head>
   <% include ../partials/core/head-open %>
   <% include ../partials/core/head-title %>
@@ -8,7 +8,8 @@
 <body>
   <% include ../partials/core/body-open %>
 
-  <%- body %>
+  <%- page.body %>
+  <%- print(page) %>
 
   <% include ../partials/shared/footer %>
   <% include ../partials/core/body-close %>
