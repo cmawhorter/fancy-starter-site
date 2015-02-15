@@ -1,3 +1,13 @@
+<% uses('route', function(properties) { return true; }).as('allPages') %>
+
+
+  <h2>All Pages</h2>
+  <ul>
+    <% allPages.forEach(function(page) { %>
+      <li><a href="<%= page.url() %>"><%= page.title %></a></li>
+    <% }) %>
+  </ul>
+
     <footer>
       <p>&copy; <%= new Date().getFullYear() %> My Site</p>
     </footer>

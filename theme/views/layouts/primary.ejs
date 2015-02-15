@@ -1,3 +1,4 @@
+<% uses('resource', 'someResource').as('providerPages') %>
 <!DOCTYPE html>
 <html lang="<%= request.locale %>">
 <head>
@@ -9,9 +10,15 @@
   <% include ../partials/core/body-open %>
 
   <%- page.body %>
-  <%- print(page) %>
 
-  <% include ../partials/shared/footer %>
+  <h2>Provider Pages</h2>
+  <ul>
+    <% providerPages.forEach(function(page) { %>
+      <li><a href="<%= page.url() %>"><%= page.title %></a></li>
+    <% }) %>
+  </ul>
+
+  <%- partial('shared/footer') %>
   <% include ../partials/core/body-close %>
 </body>
 </html>
