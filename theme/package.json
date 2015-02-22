@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "FancyStarterWebsiteTheme",
+  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Fancy theme for starter website",
+  "engines": {
+    "fancy": "0.1.x"
+  }
+}

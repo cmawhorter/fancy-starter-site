@@ -1,4 +1,4 @@
 <script src="/js/main.js"></script>
 <% if (env.stage === 'development') { %>
-  <script src="//localhost:35729/livereload.js?snipver=1"></script>
+  <script src="//localhost:<%= config['serve:livereloadport'] %>/livereload.js?snipver=1"></script>
 <% } %>
