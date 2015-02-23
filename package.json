@@ -9,5 +9,7 @@
   },
   "dependencies": {
     "fancy": "git+https://github.com/cmawhorter/fancy.git"
+  },
+  "fancy": {
   }
 }
