@@ -35,10 +35,8 @@ module.exports = function($el, callback) {
       retrieve.push(website);
       if (retrieve.length >= num) {
         var html = buildHtml(retrieve, target);
-        // returning html string replaces outer html
-        callback(null, '<p>' + html + '</p>');
-        // // or replace inner html to leave <fancy-*> tag
-        // $el.html(html);
+        $el.replaceWith('<p>' + html + '</p>');
+        callback(null);
       }
     });
   }
