@@ -1,6 +1,7 @@
 module.exports = function(collection, options) {
-  var pageStart = parseInt(options.pageStart, 10) || 0;
-  var pageLimit = parseInt(options.pageLimit, 10) || 10;
+  options = options || {};
+  var pageStart = parseInt(options.start, 10) || 0;
+  var pageLimit = parseInt(options.limit, 10) || 10;
 
   var start = pageStart * pageLimit;
   var stop = start + pageLimit;
@@ -32,8 +33,8 @@ module.exports = function(collection, options) {
       current: pageStart
     , previous: previous
     , next: next
-    , totalPages: totalPages
-    , multiPages: totalPages > 1
-    , items: items;
+    , total: totalPages
+    , isMulti: totalPages > 1
+    , items: items
   };
 };
