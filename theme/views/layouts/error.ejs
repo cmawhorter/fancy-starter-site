@@ -7,8 +7,8 @@
 </head>
 <body style="background:grey;color:white;">
   <% include ../partials/core/body-open %>
-  <pre><%= error %></pre>
-  <p><%= message %></p>
+  <h1>Error</h1>
+  <pre><%- print(page.error) %></pre>
   <% include ../partials/core/body-close %>
 </body>
 </html>
