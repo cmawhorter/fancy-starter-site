@@ -7,8 +7,18 @@
 </head>
 <body style="background:grey;color:white;">
   <% include ../partials/core/body-open %>
-  <h1>Error</h1>
-  <pre><%- print(page.error) %></pre>
+  <h1>Error <%= page.error[0].code %></h1>
+  <h2><%= page.error[0].message %></h2>
+  <% if (env.stage === 'development') { %>
+    <hr>
+    <h3>Original Error</h3>
+    <p>This is the error message that is causing the problem.</p>
+    <%- print(page.error[0].originalError) %>
+    <hr>
+    <h3>Current Context</h3>
+    <p>The context of the page that was the source of the error.</p>
+    <%- print(page.error[0].context) %>
+  <% } %>
   <% include ../partials/core/body-close %>
 </body>
 </html>
