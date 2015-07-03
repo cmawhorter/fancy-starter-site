@@ -26,7 +26,7 @@ for (var i=0; i < 10; i++) {
 <p>Lorem ipsum</p>
 ```
 
-And that `fancy-code` block would end up being replaced with something like this: 
+And that `fancy-code` block would end up being replaced code highlighting i.e. something like this: 
 
 ```javascript
 for (var i=0; i < 10; i++) {
