@@ -8,6 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "fancy": "git+https://github.com/cmawhorter/fancy.git"
+    "fancy": "cmawhorter/fancy.git#0.1.0"
   }
 }
